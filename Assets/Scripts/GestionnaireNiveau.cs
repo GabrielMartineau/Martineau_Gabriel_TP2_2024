@@ -16,6 +16,7 @@ public class GestionnaireNiveaux : MonoBehaviour
     void Start()
     {
         champNomJoueur.text = so_infosJoueur.nomJoueur;
+        champNomMonde.text = so_infosJoueur.nomMonde;
     }
 
 }

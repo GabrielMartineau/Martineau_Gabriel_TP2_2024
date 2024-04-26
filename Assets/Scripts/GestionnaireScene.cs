@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GestionnaireScene : MonoBehaviour
 {
- public void ChangeScene(){
-    SceneManager.LoadScene("Jeu");
+ public void ChangeScene(string nomScene){
+    SceneManager.LoadScene(nomScene);
  }
 }

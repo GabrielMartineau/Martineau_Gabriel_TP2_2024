@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: InfosJoueur
   m_EditorClassIdentifier: 
   nomJoueur: 
+  nomMonde: 
   nbVie: 0
   score: 0

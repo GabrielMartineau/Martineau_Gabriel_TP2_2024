@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -42,7 +40,7 @@ public class GestionnaireAccueil : MonoBehaviour
             champNomMonde.placeholder.GetComponent<TMP_Text>().text = "Votre monde????????";
         }
         else{
-            gestionnaireScene.ChangeScene();
+            gestionnaireScene.ChangeScene("Jeu");
         }
     }
 
