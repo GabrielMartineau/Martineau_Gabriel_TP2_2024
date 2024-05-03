@@ -8,6 +8,9 @@ public class GestionnaireNiveaux : MonoBehaviour
 
     [SerializeField]
     private TMP_Text champNomJoueur; 
+    
+    [SerializeField]
+    private TMP_Text champScore; 
 
     [SerializeField]
     private TMP_Text champNomMonde; 
@@ -17,6 +20,7 @@ public class GestionnaireNiveaux : MonoBehaviour
     {
         champNomJoueur.text = so_infosJoueur.nomJoueur;
         champNomMonde.text = so_infosJoueur.nomMonde;
+        champScore.text =  "Score : " + so_infosJoueur.score;
     }
 
 }
