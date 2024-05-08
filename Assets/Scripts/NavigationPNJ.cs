@@ -24,12 +24,16 @@ public class NavigationPNJ : MonoBehaviour
             GetComponent<Animator>().SetBool("Course", true);
         }
 
-        else if(Vector3.Distance(agent.transform.position, player.position) >= distanceJoueur){
+        else {
+            agent.destination = this.transform.position;
             GetComponent<Animator>().SetBool("Course", false);
         }
     }
     
-    private void OnCollisionEnter(Collision other) {
+
+    private void OnTriggerEnter(Collider other)
+    {
+
         Debug.Log("allo");
         if(other.gameObject.CompareTag("Player")){
             so_infosJoueur.nbVie -= 1;
