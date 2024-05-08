@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nomJoueur: 
   nomMonde: 
-  nbVie: 0
+  nbVie: 3
   score: 0
