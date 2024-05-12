@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using TMPro;
 
 public class NavigationPNJ : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class NavigationPNJ : MonoBehaviour
 
     [SerializeField]
     private float distanceJoueur;
+
+    [SerializeField]
+    private GestionnaireNiveaux gestionnaireNiveaux;
+
+    [SerializeField]
+    private TMP_Text champPV; 
 
     void Start()
     {
@@ -33,12 +40,12 @@ public class NavigationPNJ : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        Debug.Log("allo");
         if(other.gameObject.CompareTag("Player")){
             so_infosJoueur.nbVie -= 1;
+            champPV.text = "Points de vie : " + so_infosJoueur.nbVie;
             Debug.Log("Perdu un point");
             GetComponent<Animator>().SetTrigger("Attaque");
+            gestionnaireNiveaux.Perdu();
         }
     }
 }

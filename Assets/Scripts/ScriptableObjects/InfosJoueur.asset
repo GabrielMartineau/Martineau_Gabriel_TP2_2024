@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dc81877a48b2e47ab57cbf31c77fab, type: 3}
   m_Name: InfosJoueur
   m_EditorClassIdentifier: 
-  nomJoueur: 
-  nomMonde: 
+  nomJoueur: gabriel
+  nomMonde: varennes
   nbVie: 3
   score: 0

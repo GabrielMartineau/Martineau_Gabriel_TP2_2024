@@ -27,11 +27,11 @@ public class GestionnaireNiveaux : MonoBehaviour
         champNomJoueur.text = so_infosJoueur.nomJoueur;
         champNomMonde.text = so_infosJoueur.nomMonde;
         champScore.text =  "Score : " + so_infosJoueur.score;
-
+        so_infosJoueur.nbVie = 3;
         champPV.text = "Points de vie : " + so_infosJoueur.nbVie;
     }
 
-    void Perdu(){
+    public void Perdu(){
         if(so_infosJoueur.nbVie == 0){
             gestionnaireScene.ChangeScene("Fin");
         }
