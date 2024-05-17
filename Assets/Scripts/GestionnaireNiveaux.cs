@@ -53,8 +53,10 @@ public class GestionnaireNiveaux : MonoBehaviour
     public void PickupObject(Component sender, object data){
         Debug.Log("Pointage : " + data);
         so_infosLevel.nbrObjectsRecupere++;
+        so_infosJoueur.score += so_recyclage.point;
+        champScore.text = "Score : " + so_infosJoueur.score;
     }
 
-    //if(sender.tag == "Recyclage"){} Pour le pickup
+    //if(sender.tag == "Recyclage"){} Pour les récipients
 
 }
