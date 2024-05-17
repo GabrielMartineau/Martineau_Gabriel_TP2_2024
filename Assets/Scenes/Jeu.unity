@@ -5546,6 +5546,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: tp_roll_01
       objectReference: {fileID: 0}
+    - target: {fileID: 7415273526459624161, guid: 675ee027266492740871dbd31f76df25,
+        type: 3}
+      propertyPath: m_TagString
+      value: Recyclage
+      objectReference: {fileID: 0}
     - target: {fileID: 7415273526459659969, guid: 675ee027266492740871dbd31f76df25,
         type: 3}
       propertyPath: m_RootOrder
@@ -5629,20 +5634,22 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 912800655}
+    - targetCorrespondingSourceObject: {fileID: 7415273526459624161, guid: 675ee027266492740871dbd31f76df25,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 912800658}
+    - targetCorrespondingSourceObject: {fileID: 7415273526459624161, guid: 675ee027266492740871dbd31f76df25,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 912800659}
   m_SourcePrefab: {fileID: 100100000, guid: 675ee027266492740871dbd31f76df25, type: 3}
---- !u!1 &912800654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7415273526459624161, guid: 675ee027266492740871dbd31f76df25,
-    type: 3}
-  m_PrefabInstance: {fileID: 912800653}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &912800655
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912800654}
+  m_GameObject: {fileID: 7415273527358771564}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5657,6 +5664,41 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &912800658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415273527358771564}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 3.5265503, z: 2}
+  m_Center: {x: 0, y: 1.2632751, z: 0}
+--- !u!114 &912800659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415273527358771564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbd4da67b8671743857cd2b6cee62e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpObjectType: {fileID: 11400000, guid: 6d32f51c296458d449012c255d36239d, type: 2}
+  pickUpObjectEvent: {fileID: 11400000, guid: cf65091e07f2d6447825cc6880a90514, type: 2}
 --- !u!1001 &923999274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5750,6 +5792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 955274308}
   - component: {fileID: 955274309}
+  - component: {fileID: 955274310}
   m_Layer: 0
   m_Name: GestionnaireNiveaux
   m_TagString: Untagged
@@ -5785,11 +5828,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   so_infosJoueur: {fileID: 11400000, guid: bd1002e3f671bec42b5f7ed8c86e1c9c, type: 2}
+  so_infosLevel: {fileID: 11400000, guid: 0dc018dabbc1f4d4491bbdc5de7c40f0, type: 2}
+  so_recyclage: {fileID: 11400000, guid: 6d32f51c296458d449012c255d36239d, type: 2}
+  so_poubelle: {fileID: 11400000, guid: e8958e72b4c68114eb97a4e14ea5dea2, type: 2}
+  so_compost: {fileID: 11400000, guid: 2f921e9f15dd5dc4b82e5c221f001a73, type: 2}
   gestionnaireScene: {fileID: 1967122592}
   champNomJoueur: {fileID: 619028338}
   champScore: {fileID: 2132401349}
   champNomMonde: {fileID: 885806200}
   champPV: {fileID: 1803113446}
+--- !u!114 &955274310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955274307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecfc1d26b985a84ab7dfd08c309f5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: cf65091e07f2d6447825cc6880a90514, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 955274309}
+        m_TargetAssemblyTypeName: GestionnaireNiveaux, Assembly-CSharp
+        m_MethodName: PickupObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &958874954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8073079150079247676, guid: f048ecd1c9e056542b4c3d5762043fe6,
@@ -13889,6 +13964,12 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7415273527358771564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7415273526459624161, guid: 675ee027266492740871dbd31f76df25,
+    type: 3}
+  m_PrefabInstance: {fileID: 912800653}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7515402287805907071
 MonoBehaviour:
   m_ObjectHideFlags: 0

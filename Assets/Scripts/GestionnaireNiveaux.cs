@@ -7,6 +7,18 @@ public class GestionnaireNiveaux : MonoBehaviour
     private InfosJoueur so_infosJoueur;
 
     [SerializeField]
+    private InfosLevel so_infosLevel;
+
+    [SerializeField]
+    private CollectableObject so_recyclage;
+
+    [SerializeField]
+    private CollectableObject so_poubelle;
+
+    [SerializeField]
+    private CollectableObject so_compost;
+
+    [SerializeField]
     private GestionnaireScene gestionnaireScene;
 
     [SerializeField]
@@ -26,6 +38,7 @@ public class GestionnaireNiveaux : MonoBehaviour
     {
         champNomJoueur.text = so_infosJoueur.nomJoueur;
         champNomMonde.text = so_infosJoueur.nomMonde;
+        so_infosJoueur.score = 0;
         champScore.text =  "Score : " + so_infosJoueur.score;
         so_infosJoueur.nbVie = 3;
         champPV.text = "Points de vie : " + so_infosJoueur.nbVie;
@@ -36,5 +49,12 @@ public class GestionnaireNiveaux : MonoBehaviour
             gestionnaireScene.ChangeScene("Fin");
         }
     }
+
+    public void PickupObject(Component sender, object data){
+        Debug.Log("Pointage : " + data);
+        so_infosLevel.nbrObjectsRecupere++;
+    }
+
+    //if(sender.tag == "Recyclage"){} Pour le pickup
 
 }
