@@ -18,7 +18,6 @@ public class Collectable : MonoBehaviour
             transform.SetParent(joueurPosition);
             transform.localPosition = new Vector3(0, 0, 2);
             transform.SetParent(joueurPosition, false);
-            
         }
     }
 }

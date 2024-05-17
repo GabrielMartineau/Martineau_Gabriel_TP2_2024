@@ -5373,6 +5373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c067d0a26e8e554ab67fd7fde7cb130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  depotObjectType: {fileID: 11400000, guid: 97f6b4a4e3ab7ca4babd5df7debd94e8, type: 2}
+  depotObjectEvent: {fileID: 11400000, guid: 6b14adf65ddf26f42b23ff824938aae1, type: 2}
 --- !u!65 &880031901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5875,6 +5877,7 @@ GameObject:
   - component: {fileID: 955274308}
   - component: {fileID: 955274309}
   - component: {fileID: 955274310}
+  - component: {fileID: 955274311}
   m_Layer: 0
   m_Name: GestionnaireNiveaux
   m_TagString: Untagged
@@ -5912,8 +5915,6 @@ MonoBehaviour:
   so_infosJoueur: {fileID: 11400000, guid: bd1002e3f671bec42b5f7ed8c86e1c9c, type: 2}
   so_infosLevel: {fileID: 11400000, guid: 0dc018dabbc1f4d4491bbdc5de7c40f0, type: 2}
   so_recyclage: {fileID: 11400000, guid: 6d32f51c296458d449012c255d36239d, type: 2}
-  so_poubelle: {fileID: 11400000, guid: e8958e72b4c68114eb97a4e14ea5dea2, type: 2}
-  so_compost: {fileID: 11400000, guid: 2f921e9f15dd5dc4b82e5c221f001a73, type: 2}
   gestionnaireScene: {fileID: 1967122592}
   champNomJoueur: {fileID: 619028338}
   champScore: {fileID: 2132401349}
@@ -5938,6 +5939,34 @@ MonoBehaviour:
       - m_Target: {fileID: 955274309}
         m_TargetAssemblyTypeName: GestionnaireNiveaux, Assembly-CSharp
         m_MethodName: PickupObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &955274311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955274307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecfc1d26b985a84ab7dfd08c309f5d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 6b14adf65ddf26f42b23ff824938aae1, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 955274309}
+        m_TargetAssemblyTypeName: GestionnaireNiveaux, Assembly-CSharp
+        m_MethodName: DepotObject
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

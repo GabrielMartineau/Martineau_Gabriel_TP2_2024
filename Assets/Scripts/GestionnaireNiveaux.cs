@@ -13,12 +13,6 @@ public class GestionnaireNiveaux : MonoBehaviour
     private CollectableObject so_recyclage;
 
     [SerializeField]
-    private CollectableObject so_poubelle;
-
-    [SerializeField]
-    private CollectableObject so_compost;
-
-    [SerializeField]
     private GestionnaireScene gestionnaireScene;
 
     [SerializeField]
@@ -54,6 +48,13 @@ public class GestionnaireNiveaux : MonoBehaviour
         Debug.Log("Pointage : " + data);
         so_infosLevel.nbrObjectsRecupere++;
         so_infosJoueur.score += so_recyclage.point;
+        champScore.text = "Score : " + so_infosJoueur.score;
+    }
+
+    public void DepotObject(Component sender, object data){
+        Debug.Log("Tu as déposé un objet");
+        so_infosLevel.nbrObjectsCollect++;
+        so_infosJoueur.score += 5;
         champScore.text = "Score : " + so_infosJoueur.score;
     }
 
