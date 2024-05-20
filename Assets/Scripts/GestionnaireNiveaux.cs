@@ -13,6 +13,12 @@ public class GestionnaireNiveaux : MonoBehaviour
     private CollectableObject so_recyclage;
 
     [SerializeField]
+    private BonObject so_bonObject;
+
+    [SerializeField]
+    private MauvaisObject so_mauvaisObject;
+
+    [SerializeField]
     private GestionnaireScene gestionnaireScene;
 
     [SerializeField]
@@ -26,6 +32,8 @@ public class GestionnaireNiveaux : MonoBehaviour
 
     [SerializeField]
     private TMP_Text champPV; 
+
+    public bool isHoldObject = false;
 
     // Start is called before the first frame update
     void Start()
@@ -49,15 +57,23 @@ public class GestionnaireNiveaux : MonoBehaviour
         so_infosLevel.nbrObjectsRecupere++;
         so_infosJoueur.score += so_recyclage.point;
         champScore.text = "Score : " + so_infosJoueur.score;
+        isHoldObject = true;
     }
 
-    public void DepotObject(Component sender, object data){
+    public void DepotBonObject(Component sender, object data){
         Debug.Log("Tu as déposé un objet");
         so_infosLevel.nbrObjectsCollect++;
-        so_infosJoueur.score += 5;
+        so_infosJoueur.score += so_bonObject.pointBon;
         champScore.text = "Score : " + so_infosJoueur.score;
+        isHoldObject = false;
     }
 
-    //if(sender.tag == "Recyclage"){} Pour les récipients
+    public void DepotMauvaisObject(Component sender, object data){
+        Debug.Log("Tu as déposé un objet");
+        so_infosLevel.nbrObjectsCollect++;
+        so_infosJoueur.score += so_mauvaisObject.pointMauvais;
+        champScore.text = "Score : " + so_infosJoueur.score;
+        isHoldObject = false;
+    }
 
 }

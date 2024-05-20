@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 140ba98b00f11314894fdeda58788b0d, type: 3}
-  m_Name: BonMauvaisObject
+  m_Name: BonObject
   m_EditorClassIdentifier: 
   pointBon: 5
-  pointMauvais: -5
   sonBon: {fileID: 0}
-  sonMauvais: {fileID: 0}

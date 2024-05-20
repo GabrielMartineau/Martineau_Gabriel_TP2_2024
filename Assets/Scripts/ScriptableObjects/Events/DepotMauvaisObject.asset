@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a92d83de282234468c1a8d5c4c910ff, type: 3}
-  m_Name: DepotObject
+  m_Name: DepotMauvaisObject
   m_EditorClassIdentifier: 
   eventListeners: []

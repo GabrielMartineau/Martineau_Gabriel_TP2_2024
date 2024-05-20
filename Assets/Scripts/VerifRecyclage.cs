@@ -5,18 +5,26 @@ using UnityEngine;
 public class VerifRecyclage : MonoBehaviour
 {
     [SerializeField]
-    private BonMauvaisObject depotObjectType;
+    private BonObject depotObjectBon;
 
-    public GameEvent depotObjectEvent;
+    [SerializeField]
+    private MauvaisObject depotObjectMauvais;
+
+    [SerializeField]
+    private GameEvent depotBonObjectEvent;
+
+    [SerializeField]
+    private GameEvent depotMauvaisObjectEvent;
+
     private void OnTriggerEnter(Collider other) {   
         if(other.tag == "Recyclage" || other.tag == "Compost" || other.tag == "Poubelle"){  
             if(other.tag == "Recyclage"){
-                depotObjectEvent.Raise(this, depotObjectType.pointBon);
+                depotBonObjectEvent.Raise(this, depotObjectBon.pointBon);
                 Debug.Log("T'as mis l'objet au bon endroit!");
                 Destroy(other.gameObject);
             }
             else{
-                depotObjectEvent.Raise(this, depotObjectType.pointMauvais);
+                depotMauvaisObjectEvent.Raise(this, depotObjectMauvais.pointMauvais);
                 Debug.Log("Mauvais récipient");
                 Destroy(other.gameObject);
             }
