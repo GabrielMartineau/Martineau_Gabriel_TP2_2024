@@ -7,6 +7,9 @@ public class GestionnaireFin : MonoBehaviour
     private InfosJoueur so_infosJoueur;
 
     [SerializeField]
+    private AudioSource sonBouton;
+
+    [SerializeField]
     private TMP_Text champScore; 
 
     [SerializeField]
@@ -20,5 +23,10 @@ public class GestionnaireFin : MonoBehaviour
 
     public void RetourAccueil(){
         gestionnaireScene.ChangeScene("Accueil");
+    }
+
+    public void InvokeRetourAccueil(){
+        sonBouton.Play();
+        Invoke("RetourAccueil", 0.5f);
     }
 }
