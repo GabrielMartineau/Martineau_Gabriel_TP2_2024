@@ -8,6 +8,9 @@ public class Collectable : MonoBehaviour
     private CollectableObject pickUpObjectType;
 
     [SerializeField]
+    private AudioSource collectObject;
+
+    [SerializeField]
     private GestionnaireNiveaux gestionnaireNiveaux;
 
     [SerializeField]
@@ -22,6 +25,7 @@ public class Collectable : MonoBehaviour
                 transform.SetParent(joueurPosition);
                 transform.localPosition = new Vector3(0, 0, 2);
                 transform.SetParent(joueurPosition, false);
+                collectObject.Play();
             }
         }
     }

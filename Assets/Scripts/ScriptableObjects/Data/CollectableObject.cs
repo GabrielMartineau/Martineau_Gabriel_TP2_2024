@@ -4,5 +4,4 @@ using UnityEngine;
 public class CollectableObject : ScriptableObject
 {
     public int point;
-    public AudioClip audioClip;
 }

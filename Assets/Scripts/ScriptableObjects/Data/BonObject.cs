@@ -4,5 +4,4 @@ using UnityEngine;
 public class BonObject : ScriptableObject
 {
     public int pointBon;
-    public AudioClip sonBon;
 }

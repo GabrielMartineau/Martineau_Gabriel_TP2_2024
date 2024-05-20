@@ -4,5 +4,4 @@ using UnityEngine;
 public class MauvaisObject : ScriptableObject
 {
     public int pointMauvais;
-    public AudioClip sonMauvais;
 }

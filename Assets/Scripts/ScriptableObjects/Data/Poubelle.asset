@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Poubelle
   m_EditorClassIdentifier: 
   point: 0
-  audioClip: {fileID: 0}
+  sonPickup: {fileID: 8300000, guid: 2c9be0c720e543b4c8c44c022176d0b5, type: 3}

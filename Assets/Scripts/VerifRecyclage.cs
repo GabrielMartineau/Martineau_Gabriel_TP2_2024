@@ -8,6 +8,12 @@ public class VerifRecyclage : MonoBehaviour
     private BonObject depotObjectBon;
 
     [SerializeField]
+    private AudioSource depotBon;
+
+    [SerializeField]
+    private AudioSource depotMauvais;
+
+    [SerializeField]
     private MauvaisObject depotObjectMauvais;
 
     [SerializeField]
@@ -20,11 +26,13 @@ public class VerifRecyclage : MonoBehaviour
         if(other.tag == "Recyclage" || other.tag == "Compost" || other.tag == "Poubelle"){  
             if(other.tag == "Recyclage"){
                 depotBonObjectEvent.Raise(this, depotObjectBon.pointBon);
+                depotBon.Play();
                 Debug.Log("T'as mis l'objet au bon endroit!");
                 Destroy(other.gameObject);
             }
             else{
                 depotMauvaisObjectEvent.Raise(this, depotObjectMauvais.pointMauvais);
+                depotMauvais.Play();
                 Debug.Log("Mauvais récipient");
                 Destroy(other.gameObject);
             }

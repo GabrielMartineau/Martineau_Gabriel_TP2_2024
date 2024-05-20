@@ -6,6 +6,9 @@ public class NavigationPNJ : MonoBehaviour
 {
     [SerializeField]
     private Transform player;
+
+    [SerializeField]
+    private AudioSource pertePV;
     private NavMeshAgent agent;
 
     [SerializeField]
@@ -42,6 +45,7 @@ public class NavigationPNJ : MonoBehaviour
             champPV.text = "Points de vie : " + so_infosJoueur.nbVie;
             Debug.Log("Perdu un point");
             GetComponent<Animator>().SetTrigger("Attaque");
+            pertePV.Play();
         }
     }
 }
