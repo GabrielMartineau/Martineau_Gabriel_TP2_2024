@@ -7,6 +7,12 @@ public class GestionnaireAccueil : MonoBehaviour
     private InfosJoueur so_infosJoueur;
 
     [SerializeField]
+    private AudioSource sonBouton;
+
+    [SerializeField]
+    private AudioSource sonBoutonErreur;
+
+    [SerializeField]
     private TMP_InputField champNomJoueur; 
 
     [SerializeField]
@@ -32,14 +38,17 @@ public class GestionnaireAccueil : MonoBehaviour
 
     public void VerifNom(){
         if(champNomJoueur.text == ""){
+            sonBoutonErreur.Play();
             Debug.LogWarning("Le nom du joueur n'est pas valide");
             champNomJoueur.placeholder.GetComponent<TMP_Text>().text = "Votre nom?????????";
         }
         if(champNomMonde.text == ""){
+            sonBoutonErreur.Play();
             Debug.LogWarning("Le nom du monde n'est pas valide");
             champNomMonde.placeholder.GetComponent<TMP_Text>().text = "Votre monde????????";
         }
         else{
+            sonBouton.Play();
             gestionnaireScene.ChangeScene("Jeu");
         }
     }
