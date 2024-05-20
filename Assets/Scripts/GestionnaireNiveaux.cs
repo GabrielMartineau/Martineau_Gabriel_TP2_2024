@@ -33,6 +33,9 @@ public class GestionnaireNiveaux : MonoBehaviour
     [SerializeField]
     private TMP_Text champPV; 
 
+    [SerializeField]
+    private int nbrObjectsTotal; 
+
     public bool isHoldObject = false;
 
     // Start is called before the first frame update
@@ -40,14 +43,19 @@ public class GestionnaireNiveaux : MonoBehaviour
     {
         champNomJoueur.text = so_infosJoueur.nomJoueur;
         champNomMonde.text = so_infosJoueur.nomMonde;
+        so_infosLevel.nbrObjectsCollect = 0;
+        so_infosLevel.nbrObjectsRecupere = 0;
         so_infosJoueur.score = 0;
         champScore.text =  "Score : " + so_infosJoueur.score;
         so_infosJoueur.nbVie = 3;
         champPV.text = "Points de vie : " + so_infosJoueur.nbVie;
     }
 
-    public void Perdu(){
+    void Update(){
         if(so_infosJoueur.nbVie == 0){
+            gestionnaireScene.ChangeScene("Fin");
+        }
+        if(so_infosLevel.nbrObjectsCollect == nbrObjectsTotal){
             gestionnaireScene.ChangeScene("Fin");
         }
     }

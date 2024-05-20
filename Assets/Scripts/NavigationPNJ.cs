@@ -15,9 +15,6 @@ public class NavigationPNJ : MonoBehaviour
     private float distanceJoueur;
 
     [SerializeField]
-    private GestionnaireNiveaux gestionnaireNiveaux;
-
-    [SerializeField]
     private TMP_Text champPV; 
 
     void Start()
@@ -45,7 +42,6 @@ public class NavigationPNJ : MonoBehaviour
             champPV.text = "Points de vie : " + so_infosJoueur.nbVie;
             Debug.Log("Perdu un point");
             GetComponent<Animator>().SetTrigger("Attaque");
-            gestionnaireNiveaux.Perdu();
         }
     }
 }
