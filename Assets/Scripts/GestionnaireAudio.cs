@@ -27,6 +27,7 @@ public class GestionnaireAudio : MonoBehaviour
 
     public void AjusteVolumeEffets(float volume){
         audioMixer.SetFloat("VolumeEffets", ConvertToLogarithmique(volume));
+        audioMixer.SetFloat("VolumeDiscussion", ConvertToLogarithmique(volume));
     }
 
     private float ConvertToLogarithmique(float volume)
