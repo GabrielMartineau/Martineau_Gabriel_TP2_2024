@@ -17711,8 +17711,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Appuyer sur \"Backspace\" pour faire appara\xEEtre le menu de configuration
-    de son"
+  m_text: Appuyer sur "Backspace" pour ouvrir le menu de configuration de son
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: deb11981077510a45b11f409d69d17b5, type: 2}
   m_sharedMaterial: {fileID: -1265954007708218842, guid: deb11981077510a45b11f409d69d17b5,
